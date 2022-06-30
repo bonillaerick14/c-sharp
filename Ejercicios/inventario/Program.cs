@@ -89,7 +89,7 @@ namespace inventario
             Console.Write("Ingrese la cantidad del producto: ");
             cantidad = Console.ReadLine();
 
-            movimientoInventario(codigo, Int32.Parse(cantidad), "-");
+            movimientoInventario(codigo, Int32.Parse(cantidad), "+");
         }
 
          static void ajustesnegativos() {
