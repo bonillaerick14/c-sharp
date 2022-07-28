@@ -56,7 +56,7 @@ public class DatosdePrueba
         Producto p2 = new Producto(2, "Teclado", 350);
         ListadeProductos.Add(p2);
 
-        Producto p3 = new Producto(1, "Monitor", 4000);
+        Producto p3 = new Producto(3, "Monitor", 4000);
         ListadeProductos.Add(p3);
 
 }
@@ -167,6 +167,8 @@ public void ListarClientes()
         }
 
         Console.WriteLine("");
+        Console.WriteLine("Subtotal de la orden es de: " + nuevaOrden.Subtotal);
+        Console.WriteLine("Impuesto de la orden es de: " + nuevaOrden.Impuesto);
         Console.WriteLine("Total de la orden es de: " + nuevaOrden.Total);
         Console.ReadLine();
     }
@@ -177,14 +179,14 @@ public void ListarClientes()
         Console.WriteLine("Lista de Ordenes");
         Console.WriteLine("================");
         Console.WriteLine("");  
-        Console.WriteLine("Codigo | Fecha | Total");
+        Console.WriteLine("Codigo | Fecha | Subtotal | Impuestos| Total");
         Console.WriteLine("Cliente | Vendedor");
         Console.WriteLine("======================");
         Console.WriteLine("");  
 
         foreach (var orden in ListaOrdenes)
         {
-            Console.WriteLine(orden.Codigo + " | " + orden.Fecha + " | " + orden.Total);
+            Console.WriteLine(orden.Codigo + " | " + orden.Fecha + " | " + orden.Subtotal + " | " + orden.Impuesto + " | " + orden.Total  );
             Console.WriteLine(orden.Cliente.Nombre + " | " + orden.Vendedor.Nombre);
             
             foreach (var detalle in orden.ListaOrdenDetalle)
